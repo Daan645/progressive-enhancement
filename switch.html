@@ -1,105 +1,104 @@
 <!doctype html>
 <html lang="nl">
-	<head>
-		<meta charset="utf-8">
-		<title>Switch control / Progressive Enhancement / FDND</title>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-		<link href="assets/styles.css" rel="stylesheet">
-		<style>
-*{
-	padding: 0;
-	margin: 0;
-}
+<head>
+    <meta charset="utf-8">
+    <title>Switch control / Progressive Enhancement / FDND</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+          rel="stylesheet">
+    <link href="assets/styles.css" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
 
-/*container die alle content bij elkaar houdt*/
-.container{
-	width: 100%;
-	height: 100vh;
-	background-color: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+        /*container die alle content bij elkaar houdt*/
+        .container {
+            width: 100%;
+            height: 100vh;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-/*achtergrond voor checkbox*/
-.button {
-	background-color: gray;
-	width: 200px;
-	height: 100px;
-	border-radius: 200px;
-	cursor: pointer;
-position: relative;
-	/*maakt transitie van de button smooth*/
-	transition: 0.2s ease-in-out;
-}
+        /*achtergrond voor checkbox*/
+        .button {
+            background-color: gray;
+            width: 200px;
+            height: 100px;
+            border-radius: 200px;
+            cursor: pointer;
+            position: relative;
+            /*maakt transitie van de button smooth*/
+            transition: 0.2s ease-in-out;
+        }
 
-input:focus-visible + .button {
-	outline: 3px #050542; /* Rode omlijning bij focus */
-	outline-offset: 5px;
- }
-/*ronde knop*/
-.button::before{
-	/*zorgt ervoor dat de ronde knop boven de achtergrond zweeft*/
-	position: absolute;
-	display: flex;
-	justify-content: center; /* Horizontale centrering */
-	align-items: center; /* Verticale centrering */
-	content: '';
-	font-weight: bold;
-	font-size: 2em;
-	background-color: white;
-	width: 90px;
-	height: 90px;
-	border-radius: 200px;
-	margin: 5px;
-	/*maakt de transition smooth wanneer deze checked is*/
-	transition: 0.2s ease-in-out;
-}
+        input:focus-visible + .button {
+            outline: 3px #050542; /* Rode omlijning bij focus */
+            outline-offset: 5px;
+        }
 
-/*wanneer input checked is veranderd button ook*/
-input:checked + .button{
-	/*background veranderd wanneer input checked is*/
-	background-color: #66E5BF;
+        /*ronde knop*/
+        .button::before {
+            /*zorgt ervoor dat de ronde knop boven de achtergrond zweeft*/
+            position: absolute;
+            display: flex;
+            justify-content: center; /* Horizontale centrering */
+            align-items: center; /* Verticale centrering */
+            content: '';
+            font-weight: bold;
+            font-size: 2em;
+            background-color: white;
+            width: 90px;
+            height: 90px;
+            border-radius: 200px;
+            margin: 5px;
+            /*maakt de transition smooth wanneer deze checked is*/
+            transition: 0.2s ease-in-out;
+        }
 
-}
+        /*wanneer input checked is veranderd button ook*/
+        input:checked + .button {
+            /*background veranderd wanneer input checked is*/
+            background-color: #66E5BF;
 
-/*wanneer input checked is veranderd before ook*/
-input:checked + .button:before{
-/*	de before van de button verschuift op de x as*/
-transform: translateX(100px);
-	content: 'aan';
-}
+        }
 
-input{
-	/*verbergt de input knop*/
-	visibility: hidden;
-}
+        /*wanneer input checked is veranderd before ook*/
+        input:checked + .button:before {
+            /*	de before van de button verschuift op de x as*/
+            transform: translateX(100px);
+            content: 'aan';
+        }
 
 
 
+        input {
+            /*verbergt de input knop*/
+            visibility: hidden;
+        }
 
+        /* Schrijf hier gewoon je CSS voor dit component */
 
+        /* Hint: Dit component kun je volledig met HTML en CSS bouwen */
 
-			/* Schrijf hier gewoon je CSS voor dit component */
+        /* Hint: Hoe ver ga je qua styling? Vraag jezelf dit altijd af */
+    </style>
+</head>
+<body>
+<h1>Switch control</h1>
+<!-- Hint: Op het WebKit blog stond hierover vorige maand een goed artikel -->
+<div class="container">
+    <input type="checkbox" id="check">
+    <label for="check" class="button" tabindex="0"></label>
+</div>
 
-			/* Hint: Dit component kun je volledig met HTML en CSS bouwen */
-
-			/* Hint: Hoe ver ga je qua styling? Vraag jezelf dit altijd af */
-		</style>
-	</head>
-	<body>
-		<h1>Switch control</h1>
-		<!-- Hint: Op het WebKit blog stond hierover vorige maand een goed artikel -->
-		<div class="container" >
-			<input type="checkbox" id="check">
-			<label for="check" class="button" tabindex="0"></label>
-		</div>
-
-		<details open>
-			<summary>Demo video</summary>
-			<video src="assets/switch.mp4" width="119" height="67" controls muted autoplay loop>
-				<a href="assets/switch.mp4">assets/switch.mp4</a>
-			</video>
-		</details>
-	</body>
+<details open>
+    <summary>Demo video</summary>
+    <video src="assets/switch.mp4" width="119" height="67" controls muted autoplay loop>
+        <a href="assets/switch.mp4">assets/switch.mp4</a>
+    </video>
+</details>
+</body>
 </html>
