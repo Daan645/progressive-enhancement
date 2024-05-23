@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>OBa Carousel / Progressive Enhancement / FDND</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+          rel="stylesheet">
+    <link href="assets/styles.css" rel="stylesheet">
+    <style>
+
+        /* Stijlen voor de body */
+        body {
+            background-color: #2E3537;
+        }
+
+        /* CSS-variabelen definiëren */
+        :root {
+            --cards: 4;
+            --cardHeight: 60vh;
+            --cardTopPadding: 2em;
+            --cardMargin: 4vw;
+        }
+
+        /* Stijlen voor de container */
+        .container {
+            display: flex;
+            justify-content: center;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        /* Stijlen voor de kaartenlijst */
+        #cards {
+            list-style: none; /
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: 1fr; /* Eén kolom */
+            grid-template-rows: repeat(var(--cards)), var(--cardHeight); /* Herhaal de rijen */
+            gap: var(--cardMargin);
+            padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+            margin-bottom: var(--cardMargin);
+        }
+
+        /* Index variabelen voor de kaarten */
+        #card1 { --index: 1; }
+        #card2 { --index: 2; }
+        #card3 { --index: 3; }
+        #card4 { --index: 4; }
+
+        /* Stijlen voor individuele kaarten */
+        .card {
+            position: sticky;
+            top: 0;
+            padding-top: calc(var(--index) * var(--cardTopPadding)); /*vermenigvuldigd de padding van de top met het index cijfer van de kaart zodat deze op volgorde liggen*/
+        }
+
+        /* Stijlen voor de inhoud van de kaarten */
+        .card-body {
+            box-sizing: border-box;
+            border-radius: 50px;
+            box-shadow: 0 0 30px 0 rgba(0, 0, 0, 1);
+            height: var(--cardHeight);
+            display: flex;
+        }
+
+        /* Hover-effect voor de kaarten */
+        .card:hover {
+            scale: 1.15;
+            rotate: 10deg;
+            transition: 0.1s ease-out;
+        }
+
+    </style>
+    <script type="module">
+
+    </script>
+</head>
+<body>
+<div class="container">
+    <ul id="cards">
+        <li class="card" id="card1">
+            <img src="assets/img/boek1.jpeg" class="card-body" alt="lord of the rings the two towers" width="500" height="800">
+        </li>
+        <li class="card" id="card2">
+            <img src="assets/img/boek2.jpeg" class="card-body" alt="lord of the rings the fellowship of the ring" width="500" height="800">
+        </li>
+        <li class="card" id="card3">
+            <img src="assets/img/rich-dad-poor-dad.jpg" class="card-body" alt="rich dad poor dad" width="500" height="800">
+        </li>
+        <li class="card" id="card4">
+            <img src="assets/img/het-leven-van-een-loser.jpg" class="card-body" alt="het leven van een loser" width="500" height="800">
+        </li>
+    </ul>
+</div>
+</body>
+</html>
