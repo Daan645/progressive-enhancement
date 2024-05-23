@@ -26,9 +26,13 @@ Het doel van deze opdracht is te leren hoe je een website kan ontwerpen en maken
 ### Progressive enhancement
 Progressive Enhancement is een _(coding) strategy_ waarmee je er voor kan zorgen dat je website het altijd doet. 
 
-1. Eerst bouw je de _core functionality_ van je website in HTML, zo nodig met server-side rendering. De _content layer_.
-2. Daarna voeg je CSS toe voor feedback voor de gebruiker en om de huisstijl toe te passen, de _presentation layer_.
-3. Tot slot voeg je met CSS en JS extra enhancements toe om de _User Experience_ te verbeteren.
+1. Eerst bouw je de _core functionality_ van je website in HTML, zo nodig met server-side rendering. 
+De _content layer_. 
+Zo zorg je er voor dat je website het in de meest eenvoudige vorm goed doet.
+2. Daarna voeg je CSS toe voor feedback voor de gebruiker en om de huisstijl toe te passen.
+Dit noemen we de _presentation layer_.
+3. Tot slot voeg je met CSS en JS extra enhancements toe om de _User Experience_ te verbeteren. 
+Als een browser CSS en/of JS niet ondersteunt valt het terug naar laag 1 of 2, zodat de website altijd werkt.
 
 ![image](https://github.com/fdnd-task/progressive-enhancement/assets/1391509/f6d0490b-6748-4fc8-8a63-d33d2f2d0b68)
 <br><small>_The skateboard may be a little slower, but it doesn’t stop the user getting to where they want to go. So, if the user’s browser doesn’t support JavaScript or modern CSS then it doesn’t break_ - Andy Bell
@@ -40,21 +44,31 @@ Progressive Enhancement is een _(coding) strategy_ waarmee je er voor kan zorgen
 
 Voor deze opdracht ga je een aantal UI componenten ontwerpen, bouwen en testen in verschillende lagen, volgens het principe van _Progressive Enhancement_. 
 
+Fork deze leertaak en ga aan de slag met de [files die klaar staan](https://fdnd-task.github.io/progressive-enhancement/).
 
+Voor elk component staat een HTML-file klaar met een demo video van het eindresultaat. 
+In de HTML van elk component staan wat hints en content die je nodig hebt.
 
 ### UI componenten
 
 Maak minimaal 3 van onderstaande user interface componenten: 
 
-- Veelgestelde vragen
-- Switch control
-- Mobiel menu
-- Rating
-- Favorieten picker
-- Carrousel
-- File upload met preview
-- Tabbladen
+- [Veelgestelde vragen](https://fdnd-task.github.io/progressive-enhancement/faq.html)
+- [Switch control](https://fdnd-task.github.io/progressive-enhancement/switch.html)
+- [Mobiel menu](https://fdnd-task.github.io/progressive-enhancement/menu.html)
+- [Rating](https://fdnd-task.github.io/progressive-enhancement/rating.html)
+- [Favorieten picker](https://fdnd-task.github.io/progressive-enhancement/pickers.html)
+- [Carrousel](https://fdnd-task.github.io/progressive-enhancement/carrousel.html)
+- [File upload met preview](https://fdnd-task.github.io/progressive-enhancement/file.html)
+- [Tabbladen](https://fdnd-task.github.io/progressive-enhancement/tabs.html)
 
+#### voor sprint 11
+
+Voor sprint 11 is het het interessantst om componenten uit je ontwerp voor de leertaak in sprint 11 te gebruiken. 
+Je mag ook componenten uit bovenstaande lijst gebruiken.
+Het is een individuele opdracht - dus elke teamlid werkt eigen componenten uit (of maakt een substantieel andere uitwerking van dezelfde component).
+
+Ieder teamlid werkt minimaal 2 componenten uit.
 
 ### Aanpak (per component)
 
@@ -68,6 +82,9 @@ Maak minimaal 3 van onderstaande user interface componenten:
 8. Test deze “enhanced” versie(s) op verschillende browsers en devices.
 9. Documenteer je experiment.
 
+#### voor sprint 11
+10. In sprint 11 is het doel pleasurable (ga lekker los).
+11. Documenteer je experiment.
 
 ### Bronnen bouwfase
 
